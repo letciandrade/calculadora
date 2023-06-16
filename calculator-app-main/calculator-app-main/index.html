@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+  
+  <style>
+    /* .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); } */
+
+    :root{
+       /* Theme 1 */
+
+ /* Backgrounds */
+
+--Verydarkdesaturatedblue1: hsl(222, 26%, 31%);
+--Verydarkdesaturatedblue2: hsl(223, 31%, 20%);
+--Verydarkdesaturatedblue3: hsl(224, 36%, 15%);
+
+ /* Keys */
+
+--Desaturateddarkblue: hsl(225, 21%, 49%);
+--Desaturateddarkblue: hsl(224, 28%, 35%);
+
+--Red: hsl(6, 63%, 50%);
+--Darkred: hsl(6, 70%, 34%);
+
+--Lightgrayishorange: hsl(30, 25%, 89%);
+--Grayishorange: hsl(28, 16%, 65%);
+
+ /* Text */
+
+--Verydarkgrayishblue: hsl(221, 14%, 31%);
+--White: hsl(0, 0%, 100%);
+
+ /* Theme 2 */
+
+ /* Backgrounds */
+
+--Lightgray: hsl(0, 0%, 90%);
+--Grayishred: hsl(0, 5%, 81%);
+--Verylightgray: hsl(0, 0%, 93%);
+
+ /* Keys */
+
+--Darkmoderatecyan: hsl(185, 42%, 37%);
+--Verydarkcyan: hsl(185, 58%, 25%);
+
+--Orange: hsl(25, 98%, 40%);
+--Darkorange: hsl(25, 99%, 27%);
+
+--Lightgrayishyellow: hsl(45, 7%, 89%);
+--Darkgrayishorange: hsl(35, 11%, 61%);
+
+ /* Text */
+
+--Verydarkgrayishyellow: hsl(60, 10%, 19%);
+--White: hsl(0, 0%, 100%);
+
+ /* Theme 3 */
+
+ /* Backgrounds */
+
+--Verydarkviolet: hsl(268, 75%, 9%);
+--Verydarkviolet: hsl(268, 71%, 12%);
+
+/* Keys */
+
+--Darkviolet: hsl(281, 89%, 26%);
+--Vividmagenta: hsl(285, 91%, 52%);
+
+--Purecyan: hsl(176, 100%, 44%);
+--Softcyan: hsl(177, 92%, 70%);
+
+--Verydarkviolet: hsl(268, 47%, 21%);
+--Darkmagenta: hsl(290, 70%, 36%);
+
+ /* Text */
+
+--Lightyellow: hsl(52, 100%, 62%);
+--Verydarkblue: hsl(198, 20%, 13%);
+--White: hsl(0, 0%, 100%);
+    }
+
+    
+
+    .container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: var(--Verydarkdesaturatedblue1);
+    }
+
+    .header{
+      display: flex;
+      flex-direction: row;
+      background-color: var(--Verydarkdesaturatedblue3);
+      width: 20rem;
+      border-radius: 0.4rem;
+    }
+
+    .calculo{
+      background-color: var(--Verydarkdesaturatedblue3);
+      border-radius: 0.3rem;
+      margin-top: 0.8rem;
+      width: 20rem;
+    }
+
+    .divBtn{
+      margin-top: 0.8rem;
+      width: 20rem;
+      height: 20rem;
+      border-radius: 0.4rem;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--Verydarkdesaturatedblue2);
+    }
+
+    .divBtn button{
+      width: 3.2rem;
+      height: 3rem;
+      border: none;
+      border-radius: 0.4rem;
+      margin-right: 0.9rem;
+      
+    }
+
+    .divBtn section{
+      margin-top: 0.9rem;
+    
+    }
+
+   
+
+  </style>
+</head>
+<body>
+
+
+
+<main>
+  <section class="container">
+
+<!-- primeira sessao -->
+
+    <article class="header">
+
+  <!-- titulo da calculadora -->
+  <p>calc</p>
+  <!-- para o tema -->
+
+  <p>Theme</p>
+<div class="themeDiv">
+  <p>1 2 3</p>
+  <button class="btnTheme" type="button">theme</button>
+</div>
+
+    </article>
+
+<!-- segunda sessao -->
+
+    <div class="calculo">
+<p class="output"> </p>
+    </div>
+
+<!-- terceira sessao -->
+
+    <div class="divBtn">
+
+<section class="botoesNum1">
+  <button class="btn7" type="button">7</button>
+  <button class="btn8" type="button">8</button>
+  <button class="btn9" type="button">9</button>
+  <button class="btnDel" type="button">DEL</button>
+</section>
+
+<section class="botoesNum2">
+  <button class="btn7" type="button">4</button>
+  <button class="btn8" type="button">5</button>
+  <button class="btn9" type="button">6</button>
+  <button class="btnDel" type="button">+</button>
+</section>
+
+<section class="botoesNum3">
+  <button class="btn7" type="button">1</button>
+  <button class="btn8" type="button">2</button>
+  <button class="btn9" type="button">3</button>
+  <button class="btnDel" type="button">-</button>
+</section>
+
+<section class="botoesNum4">
+  <button class="btn7" type="button">.</button>
+  <button class="btn8" type="button">0</button>
+  <button class="btn9" type="button">/</button>
+  <button class="btnDel" type="button">x</button>
+</section>
+
+<section class="botoesFun">
+  <button class="btnReset" type="button">RESET</button>
+  <button class="btnResult" type="button">=</button>
+</section>
+
+    </div>
+  </section>
+</main>
+
+
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+
+  <script>
+// const btnTheme = document.queryselector('.btnTheme')
+
+// btnTheme.addEventListener('click', ()=>{
+
+
+
+// })
+
+
+
+
+  </script>
+
+</body>
+</html>
